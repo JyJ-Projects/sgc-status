@@ -1,0 +1,66 @@
+# ============================================
+# Upptime Status Page Configuration
+# ============================================
+# This file configures a free, open-source status page powered by GitHub Actions.
+#
+# Setup instructions:
+# 1. Create a NEW GitHub repo named "status" (e.g., your-org/status)
+# 2. Copy this file to that repo as .upptimerc.yml
+# 3. Enable GitHub Pages (Settings → Pages → Source: gh-pages branch)
+# 4. Point DNS: status.safegamingcloud.com → CNAME to your-org.github.io
+# 5. Upptime will auto-run every 5 minutes via GitHub Actions
+#
+# Docs: https://upptime.js.org
+
+owner: JGCdev   # ← Change this
+repo: sgc-status                   # ← Name of the status repo
+
+sites:
+  - name: Website
+    url: https://safegamingcloud.com
+    expectedStatusCodes:
+      - 200
+      - 301
+      - 308
+
+  - name: API
+    url: https://safegamingcloud.com/health
+    expectedStatusCodes:
+      - 200
+
+  - name: API (Auth endpoint)
+    url: https://safegamingcloud.com/api/v1/auth/me
+    expectedStatusCodes:
+      - 401   # Expected without token — means the API is responding
+
+status-website:
+  publish: true
+  cname: status.safegamingcloud.com
+  name: Safe Gaming Cloud Status
+  theme: dark
+  logoUrl: https://safegamingcloud.com/logo.svg
+  favicon: https://safegamingcloud.com/favicon.ico
+  navbar:
+    - title: Main Site
+      href: https://safegamingcloud.com
+
+# Notifications (optional — uncomment and configure)
+notifications:
+  - type: discord
+    url: $DISCORD_WEBHOOK_URL
+
+# Check frequency (GitHub Actions cron)
+workflowSchedule:
+  - "*/5 * * * *"     # Every 5 minutes
+
+# Commits settings
+commitMessages:
+  statusChange: "🔔 $SITE_NAME is $STATUS ($RESPONSE_CODE)"
+  degradedPerformance: "⚠️ $SITE_NAME has degraded performance ($RESPONSE_TIME ms)"
+  commitSummaryTitle: "📊 Status summary"
+
+i18n:
+  activeIncidents: Active incidents
+  allSystemsOperational: All systems operational
+  incidentReport: "Incident report for {0}"
+  pastIncidents: Past incidents

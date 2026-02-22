@@ -1,0 +1,30 @@
+name: Uptime CI
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+jobs:
+  uptime:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+          token: ${{ secrets.GH_PAT }}
+      - name: Run upptime (readme)
+        uses: upptime/uptime-monitor@v1.41.0
+        with:
+          command: "readme"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Run upptime (site)
+        uses: upptime/uptime-monitor@v1.41.0
+        with:
+          command: "site"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./site/status-page/__sapper__/export
