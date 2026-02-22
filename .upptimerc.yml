@@ -12,8 +12,8 @@
 #
 # Docs: https://upptime.js.org
 
-owner: JGCdev   # ← Change this
-repo: sgc-status                   # ← Name of the status repo
+owner: JyJ-Projects
+repo: sgc-status
 
 sites:
   - name: Website
