@@ -11,7 +11,13 @@ jobs:
         with:
           ref: master
           token: ${{ secrets.GH_PAT }}
-      - name: Run upptime
+      - name: Run upptime (update)
+        uses: upptime/uptime-monitor@v1.41.0
+        with:
+          command: "update"
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Run upptime (readme)
         uses: upptime/uptime-monitor@v1.41.0
         with:
           command: "readme"
