@@ -2,30 +2,23 @@ name: Uptime CI
 on:
   schedule:
     - cron: "*/5 * * * *"
+  repository_dispatch:
+    types: [uptime]
   workflow_dispatch:
 jobs:
-  uptime:
+  release:
+    name: Check status
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
-          ref: master
-          token: ${{ secrets.GH_PAT }}
-      - name: Run upptime (update)
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Check endpoint status
         uses: upptime/uptime-monitor@v1.41.0
         with:
           command: "update"
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-      - name: Run upptime (readme)
-        uses: upptime/uptime-monitor@v1.41.0
-        with:
-          command: "readme"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
-      - name: Run upptime (site)
-        uses: upptime/uptime-monitor@v1.41.0
-        with:
-          command: "site"
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
+          SECRETS_CONTEXT: ${{ toJson(secrets) }}
