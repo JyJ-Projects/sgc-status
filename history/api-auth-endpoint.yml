@@ -1,7 +1,7 @@
 url: https://safegamingcloud.com/api/v1/auth/me
-status: up
-code: 401
-responseTime: 150
-lastUpdated: 2026-02-23T00:23:06.936Z
+status: down
+code: 502
+responseTime: 3121
+lastUpdated: 2026-02-23T23:03:28.607Z
 startTime: 2026-02-23T00:23:06.785Z
 generator: Upptime <https://github.com/upptime/upptime>
