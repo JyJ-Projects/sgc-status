@@ -22,35 +22,39 @@
     "url": "https://safegamingcloud.com/health",
     "icon": "https://icons.duckduckgo.com/ip3/safegamingcloud.com.ico",
     "slug": "api",
-    "status": "up",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 173,
-    "timeDay": 173,
-    "timeWeek": 173,
-    "timeMonth": 173,
-    "timeYear": 173,
-    "dailyMinutesDown": {}
+    "status": "down",
+    "uptime": "99.98%",
+    "uptimeDay": "99.98%",
+    "uptimeWeek": "99.98%",
+    "uptimeMonth": "99.98%",
+    "uptimeYear": "99.98%",
+    "time": 1647,
+    "timeDay": 1647,
+    "timeWeek": 1647,
+    "timeMonth": 1647,
+    "timeYear": 1647,
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   },
   {
     "name": "API (Auth endpoint)",
     "url": "https://safegamingcloud.com/api/v1/auth/me",
     "icon": "https://icons.duckduckgo.com/ip3/safegamingcloud.com.ico",
     "slug": "api-auth-endpoint",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 150,
-    "timeDay": 150,
-    "timeWeek": 150,
-    "timeMonth": 150,
-    "timeYear": 150,
-    "dailyMinutesDown": {}
+    "time": 1636,
+    "timeDay": 1636,
+    "timeWeek": 1636,
+    "timeMonth": 1636,
+    "timeYear": 1636,
+    "dailyMinutesDown": {
+      "2026-02-23": 0
+    }
   }
 ]
