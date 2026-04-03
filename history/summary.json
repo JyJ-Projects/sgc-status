@@ -11,9 +11,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 808,
-    "timeDay": 602,
-    "timeWeek": 751,
-    "timeMonth": 796,
+    "timeDay": 542,
+    "timeWeek": 775,
+    "timeMonth": 801,
     "timeYear": 808,
     "dailyMinutesDown": {}
   },
@@ -29,9 +29,9 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 273,
-    "timeDay": 119,
-    "timeWeek": 136,
-    "timeMonth": 133,
+    "timeDay": 107,
+    "timeWeek": 141,
+    "timeMonth": 134,
     "timeYear": 273,
     "dailyMinutesDown": {}
   },
@@ -40,17 +40,19 @@
     "url": "https://safegamingcloud.com/api/v1/auth/me",
     "icon": "https://icons.duckduckgo.com/ip3/safegamingcloud.com.ico",
     "slug": "api-auth-endpoint",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 260,
-    "timeDay": 110,
-    "timeWeek": 123,
-    "timeMonth": 122,
-    "timeYear": 260,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.94%",
+    "uptimeDay": "97.59%",
+    "uptimeWeek": "99.66%",
+    "uptimeMonth": "99.92%",
+    "uptimeYear": "99.94%",
+    "time": 257,
+    "timeDay": 114,
+    "timeWeek": 128,
+    "timeMonth": 123,
+    "timeYear": 257,
+    "dailyMinutesDown": {
+      "2026-04-03": 35
+    }
   }
 ]
